@@ -1,0 +1,10 @@
+<dl class="dl-horizontal">
+  <dt>id</dt>
+  <dd>{{error.id}}</dd>
+  <dt>Hely</dt>
+  <dd>{{error.location}}</dd>
+  <dt>Leírás</dt>
+  <dd>{{error.description}}</dd>
+</dl>
+{{link-to "Vissza" "errors.list" class="btn btn-default"}}
+{{link-to "Új auto felvetele" "errors.newauto" error.id class="btn btn-default"}}

@@ -1,0 +1,26 @@
+{{log error}}
+<form class="form-horizontal" method="post" data-toggle="validator">
+    <fieldset>
+        <div class="form-group {{if errors.location "has-error"}}">
+            <label for="helyszin" class="col-lg-2 control-label">Tipus</label>
+            <div class="col-lg-10">
+                <input required class="form-control" id="helyszin" name="helyszin" placeholder="pl. Mercedesz" type="text" value="{{error.location}}">
+                <div class="help-block">{{errors.location}}</div>
+            </div>
+        </div>
+        <div class="form-group {{if errors.description "has-error"}}">
+            <label for="leiras" class="col-lg-2 control-label">Rendszám</label>
+            <div class="col-lg-10">
+                <textarea required class="form-control" rows="3" id="leiras" name="leiras">{{error.description}}</textarea>
+                <span class="help-block">Meg kell adni a rendszamot, és leírni a problémát.</span>
+                <div class="help-block">{{errors.description}}</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Visszaállít</button>
+                <button {{action "submit" error.id}} class="submit" class="btn btn-primary">Beküld</button>
+            </div>
+        </div>
+    </fieldset>
+</form>  
