@@ -2,7 +2,6 @@
 - [Követelményanalízis](https://www.github.com/Atg269/alkfejl3beadember#követelményanalízis)
 - [Tervezés](https://www.github.com/Atg269/alkfejl3beadember#tervezés)
 - [Implementáció](https://www.github.com/Atg269/alkfejl3beadember#implementáció)
-- [Tesztelés](https://www.github.com/Atg269/alkfejl3beadember#tesztelés)
 - [Felhasználói Dokumentáció](https://www.github.com/Atg269/alkfejl3beadember#felhasználói dokumentáció)
 
 
@@ -63,20 +62,25 @@ Interfész:
 
 A project c9-en javascript-ben azon belül pedig ember.js-es technológiával lett megvalósítva. Két külön respository-t kellett létrehozni a cloud 9-en, az egyiket a restapinak a másikat magának az ember-nek. Az adatbázist egy restapis server.js működteti ami össze van kötve az ember részével a projektnek. A weboldal kinézetét handlebars fájlok szablyák meg.
  
-##Tesztelés
- 
+A fejlesztésnél felhasznált technológiák:
+  
+  - `Cloud9 Web IDE` - [https://c9.io/](https://c9.io/)
+  - `Ember.js` - [http://emberjs.com/](http://emberjs.com/)
+  - `Bower` - [http://bower.io](www.bower.io)
+  - `Bootstrap` - [http://getbootstrap.com](http://getbootstrap.com/)
  
 ##Felhasználói dokumentáció
 
 Az oldalt úgy lehet elindítani hogy az restapi repo-nak a szerverét elindítjuk (server.js fájl -> run) és az ember repositoryban ha az autoerrorproject mappában belül vagyunk a következő parancsot beirjuk: ./node_modules/.bin/ember serve
 Ezekután a bash parancsablakában a local-hostos sorra rányomunk bal gombbal és megnyomjuk hogy "open", és ezzel megnyitottuk a weboldalt ha mindent jól csináltunk.
 
-Ha valaki továbbfejleszteni szeretné a weboldalt,akkor le kell töltenie a restapis meg az emberes respositoryt cloud9-ről, majd importálnia kell őket a saját cloud 9es accountjába saját respositorikba. Ha bármilyen modul hiányzik azt npm-install-al lehet helyrehozni. 
+Ha valaki továbbfejleszteni szeretné a weboldalt,akkor le kell töltenie a restapis meg az emberes respositoryt cloud9-ről (c9.io/Atg269), majd importálnia kell őket a saját cloud 9es accountjába saját respositorikba. Ha bármilyen modul hiányzik azt npm-install-al lehet helyrehozni. 
 
-A  zökkenőmentes fejlesztéshez/használathoz szükség van 2GB memóriára és valamilyen 2 magos processzorra.
+A  zökkenőmentes fejlesztéshez/használathoz szükség van 2GB memóriára és valamilyen 2 magos processzorra. Továbbá szükség van működő internetkapcsolatra, és egy böngészőprogramra (Google Chrome, IE, Firefox, stb).
 
 További fejlesztési lehetőség:
 - Login/regisztráció
 - Csak hitelesítés után elérhető funkciók
 - Helyesen látni lehessen melyik hiba kategóriába tartozik egy autó.
+- Egy hiba-kategória törlése után rendesen törlődjenek a hozzá tartozó kocsik is az adatbázisból.
 
