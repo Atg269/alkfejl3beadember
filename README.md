@@ -1,38 +1,39 @@
-# Alkalmazások fejlesztése 3. beadandó (ember rész)
-- [Leírás](https://www.github.com/3BL/alkfejlbead3ember#leírás)
-- [Követelmények](https://www.github.com/3BL/alkfejlbead3ember#követelmények)
-- [Technológiák](https://www.github.com/3BL/alkfejlbead3ember#technológiák)
-- [Végpontok](https://www.github.com/3BL/alkfejlbead3ember#végpontok)
-- [Modellek](https://www.github.com/3BL/alkfejlbead3ember#modellek)
-- [Folyamatok](https://www.github.com/3BL/alkfejlbead3ember#folyamatok)
-- [Felhasználói interfész](https://www.github.com/3BL/alkfejlbead3ember#interfész)
-- [Adatok ellenőrzése](https://www.github.com/3BL/alkfejlbead3ember#Adatok ellenőrzése)
+# Alkalmazások fejlesztése 3. beadandó dokumentáció
+- [Követelményanalízis](https://www.github.com/Atg269/alkfejl3beadember#Követelményanalízis)
+- [Tervezés](https://www.github.com/Atg269/alkfejl3beadember#Tervezés)
+- [Implementáció](https://www.github.com/Atg269/alkfejl3beadember#Implementáció)
+- [Tesztelés](https://www.github.com/Atg269/alkfejl3beadember#Tesztelés)
+- [Felhasználói Dokumentáció](https://www.github.com/Atg269/alkfejl3beadember#Felhasználói Dokumentáció)
 
 
-##Leírás
-Ez a projekt az ELTE IK programtervező informatikus Bsc szak Alkalmazások fejlesztése tárgy harmadik
-beadandója. Egy autó hiba nyilvántartó programot próbáltam megvalósítani, ahol léteznek felhasználó definiált hiba típusok (errors) amihez fel lehet venni egy vagy több kocsit aminek pont ilyen hibája van.
-
-
-##Követelmények
+##Követelményanalízis
 
 Funkcionális elvárások
+Az alapkövetelmények a következők voltak: 
+- legalább két modellt, egy-sok kapcsolatban
+- legalább 1 űrlapot
+- legalább 1 listázó oldalt
+- legyen lehetőség új felvételére
+- legyen lehetőség meglévő szerkesztésére
+- legyen lehetőség meglévő törlésére
+- REST API végpont kialakítása
+- szerveroldali perzisztálás fájlba
 
--Legyenek a felhasználók képesek felvenni egy errort vagy egy kocsit
--Felhasználóként szeretnénk megtekinteni, szerkeszteni, törölni a chipeket
+Nem funkcionális elvárások
+-Gyors működés
+-Felhasználó barát oldalszerkezet
 
-Nem funkcionális követelmények
+##Tervezés
 
--Legyen az alkalmazás felhasználóbarát
--Működjön gyorsan
+Adatbázis-modell:
+![Adatbázis modell](https://github.mentation/bead3relation345345.png)
 
+Itt egy kép látható az adatbázis modellről. Az error modell tükrözi a chiphibát akinek egy egyedi adattagja van,
+az id-ja, tehát két ugyanolyan objektum nem lehet az adatbázisban. Lehet sok hiba, mindegyikhez lehetnek
+kiskutyák hozzárendelve, ez a kiskutyak adattag, egy kiskutyákat tartalmazó tömb, ezeket látja a felhasználó kilistázva a
+kutyalista oldalon. ** A one-to-many kapcsolat úgy valósul meg, hogy egy error-hoz több kutya is lehet rendelve, viszont visszafele már nem működik a dolog, minden kutyához csak egy hibás chip van rendelve az id-je alapján. **
 
-##Technológiák
-A project javascript-ben azon belül pedig ember.js-es technológiával van megvalósítva, a megjelenítéshez
-a handlebars fájlok felelnek az adatbázist pedig egy restapi-s workspace biztosítja.
- 
-
-##Végpontok
+Végpontok:
 
  * főoldal: http://alkfejl3beadember-atg269.c9users.io:8080/
  * errorlista: /errors/list
@@ -43,30 +44,16 @@ a handlebars fájlok felelnek az adatbázist pedig egy restapi-s workspace bizto
  * új auto hozzáadása: /errors/error_id/newauto
 
 
-##Modellek
-![Adatbázis modell](https://github.com/3BL/alkfejlbead3ember/blob/master/documentation/bead3relation345345.png)
+##Implementáció
 
-Itt egy kép látható az adatbázis modellről. Az error modell tükrözi a chiphibát akinek egy egyedi adattagja van,
-az id-ja, tehát két ugyanolyan objektum nem lehet az adatbázisban. Lehet sok hiba, mindegyikhez lehetnek
-kiskutyák hozzárendelve, ez a kiskutyak adattag, egy kiskutyákat tartalmazó tömb, ezeket látja a felhasználó kilistázva a
-kutyalista oldalon. ** A one-to-many kapcsolat úgy valósul meg, hogy egy error-hoz több kutya is lehet rendelve, viszont visszafele már nem működik a dolog, minden kutyához csak egy hibás chip van rendelve az id-je alapján. **
-
-##Folyamatok
-![Adatbázis modell](https://github.com/3BL/alkfejlbead3ember/blob/master/documentation/bead3folyamat2525.png)
-
-
-##Interfész
-![Adatbázis modell](https://github.com/3BL/alkfejlbead3ember/blob/master/documentation/webdesign252454.png)
-
-Röviden a felhasználói interfészről. A jobb felső sarokban vannak a linkek, a főoldal link értelemszerüen az index.html-re visz,
-a hibalista link a hibás chipek oldalára, a kutyalista pedig a kutyákat listázó oldalra.
-
-
-##Adatok ellenőrzése
-Új adatok felvitelénél, a validator mindig figyeli, hogy az input mezők ne legyenek üresek, figyelmeztet az esetleges
-hibákra, és ajánlott értékeket ír az üres input mezőkre.
-
-##Fejlesztés és felhasználás
+c9 stb
+A project javascript-ben azon belül pedig ember.js-es technológiával van megvalósítva, a megjelenítéshez
+a handlebars fájlok felelnek az adatbázist pedig egy restapi-s workspace biztosítja.
+ 
+##Tesztelés
+ 
+ 
+##Felhasználói dokumentáció
 
 
 A project a cloud9 webes felüleletetén lett megvalósítva, Windows-on. Ha valaki továbbfejleszteni szeretné,
@@ -76,13 +63,15 @@ Ezekután a bash parancsablakában a local-hostos sorra rányomunk bal gombbal �
 A  zökkenőmentes fejlesztéshez/használathoz szükség van 2GB memóriára és valamilyen 2 magos processzorra minimum.
 
 
-##Funkció lista 
-
-- error, auto egyedi az id alapján, csak egy lehet mindegyikből
-- Chiplistázó oldal müködik
-- Megtekintés/Szerkesztés/Törlés funkció müködik
-
 További fejlesztési lehetőség:
-- Hitelesítés után elérhető funkciók
 - Login/regisztráció
+- Csak hitelesítés után elérhető funkciók
 - Korrekten látni lehessen melyik hiba kategóriába tartozik egy autó.
+
+
+![Adatbázis modell](https://github.com/3BL/alkfejlbead3ember/blob/master/documentation/bead3folyamat2525.png)
+
+![Adatbázis modell](https://github.com/3BL/alkfejlbead3ember/blob/master/documentation/webdesign252454.png)
+
+
+
