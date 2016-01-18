@@ -23,15 +23,23 @@ Nem funkcionális elvárások
 -Gyors működés
 -Felhasználó barát oldalszerkezet
 
+Fogalomjegyzék
+
+- `Error` -  A mi esetünkben ez akar reprezentálni egy gépkocsi hibakategóriát 
+  - `location` - maga a hiba kategória attribútum (a neve, mint pl motorhiba)
+  - `description` - rövid magyarázata a hibának
+  - `date` - A dátum amikor felvették ezt a hibakategóriát (ezredmásodpercekben, januar 1 1970 óta)
+ 
+- `auto` - egy darab gépkocsi
+  - `type` - gépkocsi tipusa
+  - `license` - gépkocsi rendszáma
+
 ##Tervezés
 
 Adatbázis-modell:
 ![Adatbázis modell](https://github.com/Atg269/alkfejl3beadember/blob/master/Documentation/adatbazisdiagram.png)
 
-Itt egy kép látható az adatbázis modellről. Az error modell az itt egy kocsi hiba-kategóriájának akar megfelelni (mint pl ,
-Egyedi ID-je van tehát két ugyanolyan objektum nem lehet az adatbázisban. Lehet sok hiba, mindegyikhez lehetnek
-autók hozzárendelve, ez a "autok" adattagja az error-nak, egy autokat tartalmazó tömb, ezeket látja a felhasználó kilistázva a
-auti lista oldalon. A egy-sok kapcsolat úgy valósul meg, hogy egy error-hoz több autó is lehet rendelve, viszont visszafele már nem működik a dolog, minden autóhoz csak egy hibakategória tartozik. 
+Itt egy kép látható az adatbázis modellről. Egyedi ID-je van mindkettő modellnek tehát két ugyanolyan objektum nem lehet az adatbázisban. Lehet sok hiba, mindegyikhez lehetnek autók hozzárendelve, ez a "autok" adattagja az error-nak, egy autokat tartalmazó tömb, ezeket látja a felhasználó kilistázva az auto-lista oldalon. A egy-sok kapcsolat úgy valósul meg, hogy egy error-hoz több autó is lehet rendelve, viszont visszafele már nem működik a dolog, minden autóhoz csak egy hibakategória tartozik. 
 
 Végpontok:
 
@@ -47,6 +55,7 @@ Interfész:
 ![Oldal diagram](https://github.com/Atg269/alkfejl3beadember/blob/master/Documentation/oldaldiagram.png)
 
 Állapot-diagram:
+
 ![Állapot diagram](https://github.com/Atg269/alkfejl3beadember/blob/master/Documentation/folyamatdiagram.png)
 
 
