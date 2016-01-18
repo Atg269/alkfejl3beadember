@@ -25,7 +25,7 @@ Nem funkcionális elvárások
 Fogalomjegyzék
 
 - `Error` -  A mi esetünkben ez akar reprezentálni egy gépkocsi hibakategóriát 
-  - `location` - maga a hiba kategória attribútum (a neve, mint pl motorhiba)
+  - `location` - maga a hiba kategória neve/helye (mint pl motorhiba) 
   - `description` - rövid magyarázata a hibának
   - `date` - A dátum amikor felvették ezt a hibakategóriát (ezredmásodpercekben, januar 1 1970 óta)
  
