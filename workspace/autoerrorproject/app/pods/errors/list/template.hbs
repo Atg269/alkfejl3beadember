@@ -1,0 +1,21 @@
+{{#each messages}}
+<div class="alert alert-dismissible alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    {{this}}
+</div>
+{{/each}}
+
+<div class="page-header">
+    <h1>Bejelentett hibáim</h1>
+</div>
+
+{{log model}}
+{{error-list errors=model}}
+
+{{!--<p><a href="/errors/new" class="btn btn-default" id="newErrorButton">Új hiba felvitele</a></p> --}}
+<button {{action 'showModal' 'new-error-modal' "errors.list"}} class="btn btn-default">Új</button>
+{{!--
+{{#modal-dialog title="My modal #1"}}
+  This is the content of my modal #1
+{{/modal-dialog}}
+--}}
