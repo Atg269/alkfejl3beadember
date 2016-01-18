@@ -3,13 +3,15 @@
         <tr>
             <th>Tipus</th>
             <th>Rendszam</th>
+            <th>Hiba kategória</th>
         </tr>   
     </thead>
     <tbody>
         {{#each autok}}
         <tr>
             <td>{{type}}</td>
-            <td>{{license}}</td>
+            <td>{{license}}</td> 
+            <td>{{error.location}}</td>
         </tr>
         {{/each}}
     </tbody>

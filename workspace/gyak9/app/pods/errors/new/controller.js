@@ -9,7 +9,7 @@ export default Ember.Controller.extend({
                 location: 'labor',
                 description: 'hiba',
             }, formData));  // formData - ami bejön a formon érték az felül írja az alapértéket
-            this.transitionToRoute('errors.list')
+            this.transitionToRoute('errors.list');
         }
     }
 });

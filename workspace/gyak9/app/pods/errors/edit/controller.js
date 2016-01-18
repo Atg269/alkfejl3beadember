@@ -10,7 +10,7 @@ export default Ember.Controller.extend({
             error.setProperties(formData);  // előző két sort ezzel az eggyel is le lehet írni
             return error.save().then(() => {
                 this.transitionToRoute('errors.list');
-            })
+            });
         }
     }
 });

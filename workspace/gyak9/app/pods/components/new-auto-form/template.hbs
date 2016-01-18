@@ -2,7 +2,7 @@
 <form class="form-horizontal" method="post" data-toggle="validator">
     <fieldset>
         <div class="form-group {{if errors.location "has-error"}}">
-            <label for="helyszin" class="col-lg-2 control-label">Tipus</label>
+            <label for="helyszin" class="col-lg-2 control-label">Gepkocsi Tipus</label>
             <div class="col-lg-10">
                 <input required class="form-control" id="helyszin" name="helyszin" placeholder="pl. Mercedesz" type="text" value="{{error.location}}">
                 <div class="help-block">{{errors.location}}</div>
@@ -12,7 +12,7 @@
             <label for="leiras" class="col-lg-2 control-label">Rendszám</label>
             <div class="col-lg-10">
                 <textarea required class="form-control" rows="3" id="leiras" name="leiras">{{error.description}}</textarea>
-                <span class="help-block">Meg kell adni a rendszamot, és leírni a problémát.</span>
+                <span class="help-block">Meg kell adni a rendszamat a gepkocsinak.</span>
                 <div class="help-block">{{errors.description}}</div>
             </div>
         </div>
@@ -24,3 +24,5 @@
         </div>
     </fieldset>
 </form>  
+
+{{link-to "Finish" "errors.listautos" class="btn btn-default"}}

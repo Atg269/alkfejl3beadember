@@ -12,7 +12,6 @@
 {{log model}}
 {{error-list errors=model}}
 
-<p>{{link-to "Új hiba felvitele" "errors.new" class="btn btn-default" id="newErrorButton"}}</p>
 {{!--<p><a href="/errors/new" class="btn btn-default" id="newErrorButton">Új hiba felvitele</a></p> --}}
 <button {{action 'showModal' 'new-error-modal' "errors.list"}} class="btn btn-default">Új</button>
 {{!--

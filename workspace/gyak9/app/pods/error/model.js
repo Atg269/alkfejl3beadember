@@ -24,6 +24,6 @@ ErrorModel.reopenClass({
             description: 'még rosszabb'
         },
     ]
-})
+});
 // változót exportáljuk
 export default ErrorModel;

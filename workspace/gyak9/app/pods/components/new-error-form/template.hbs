@@ -2,9 +2,9 @@
 <form class="form-horizontal" method="post" data-toggle="validator">
     <fieldset>
         <div class="form-group {{if errors.location "has-error"}}">
-            <label for="helyszin" class="col-lg-2 control-label">Helyszín</label>
+            <label for="helyszin" class="col-lg-2 control-label">Típus</label>
             <div class="col-lg-10">
-                <input required class="form-control" id="helyszin" name="helyszin" placeholder="pl. PC6, Lovarda, 2. emeleti folyosó..." type="text" value="{{error.location}}">
+                <input required class="form-control" id="helyszin" name="helyszin" placeholder="pl. Motorhiba, keréktörés, Kormánycsavarodás, stb" type="text" value="{{error.location}}">
                 <div class="help-block">{{errors.location}}</div>
             </div>
         </div>
@@ -12,7 +12,7 @@
             <label for="leiras" class="col-lg-2 control-label">Leírás</label>
             <div class="col-lg-10">
                 <textarea required class="form-control" rows="3" id="leiras" name="leiras">{{error.description}}</textarea>
-                <span class="help-block">Meg kell adni a helyszínt, ha pedig konkrét géppel van probléma, akkor azt is.</span>
+                <span class="help-block">Rövid leírás a hibáról</span>
                 <div class="help-block">{{errors.description}}</div>
             </div>
         </div>
