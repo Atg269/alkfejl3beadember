@@ -1,9 +1,9 @@
 # Alkalmazások fejlesztése 3. beadandó dokumentáció
-- [Követelményanalízis](https://www.github.com/Atg269/alkfejl3beadember#Követelményanalízis)
-- [Tervezés](https://www.github.com/Atg269/alkfejl3beadember#Tervezés)
-- [Implementáció](https://www.github.com/Atg269/alkfejl3beadember#Implementáció)
-- [Tesztelés](https://www.github.com/Atg269/alkfejl3beadember#Tesztelés)
-- [Felhasználói Dokumentáció](https://www.github.com/Atg269/alkfejl3beadember#Felhasználói Dokumentáció)
+- [Követelményanalízis](https://www.github.com/Atg269/alkfejl3beadember#követelményanalízis)
+- [Tervezés](https://www.github.com/Atg269/alkfejl3beadember#tervezés)
+- [Implementáció](https://www.github.com/Atg269/alkfejl3beadember#implementáció)
+- [Tesztelés](https://www.github.com/Atg269/alkfejl3beadember#tesztelés)
+- [Felhasználói Dokumentáció](https://www.github.com/Atg269/alkfejl3beadember#felhasználói dokumentáció)
 
 
 ##Követelményanalízis
