@@ -18,14 +18,13 @@ beadandója. Egy autó hiba nyilvántartó programot próbáltam megvalósítani
 
 Funkcionális elvárások
 
-    Legyenek a felhasználók képesek felvenni egy errort vagy egy kocsit
-    
-    Felhasználóként szeretnénk megtekinteni, szerkeszteni, törölni a chipeket
+-Legyenek a felhasználók képesek felvenni egy errort vagy egy kocsit
+-Felhasználóként szeretnénk megtekinteni, szerkeszteni, törölni a chipeket
 
 Nem funkcionális követelmények
 
-    Legyen az alkalmazás felhasználóbarát
-    Működjön gyorsan
+-Legyen az alkalmazás felhasználóbarát
+-Működjön gyorsan
 
 
 ##Technológiák
@@ -35,13 +34,13 @@ a handlebars fájlok felelnek az adatbázist pedig egy restapi-s workspace bizto
 
 ##Végpontok
 
- * főoldal: https://bead3ember-a3bl.c9users.io
- * chiplista: /errors/list
- * chip megtekintése: /errors/error_id
- * chip szerkesztése: /errors/edit/error_id
- * chip felvétele: /errors/list
- * kutyalista: /errors/listkiskutya
- * új kiskutya hozzáadása: /errors/error_id/newkiskutya
+ * főoldal: http://alkfejl3beadember-atg269.c9users.io:8080/
+ * errorlista: /errors/list
+ * error megtekintése: /errors/error_id
+ * error szerkesztése: /errors/edit/error_id
+ * error felvétele: /errors/list
+ * autok listaja: /errors/listautos
+ * új auto hozzáadása: /errors/error_id/newauto
 
 
 ##Modellek
@@ -64,25 +63,26 @@ a hibalista link a hibás chipek oldalára, a kutyalista pedig a kutyákat list�
 
 
 ##Adatok ellenőrzése
-Mikor új adatokat akarunk felvinni, a validator mindig figyeli, hogy az input mezők ne legyenek üresek, figyelmeztet az esetleges
+Új adatok felvitelénél, a validator mindig figyeli, hogy az input mezők ne legyenek üresek, figyelmeztet az esetleges
 hibákra, és ajánlott értékeket ír az üres input mezőkre.
 
 ##Fejlesztés és felhasználás
 
 
-Én a cloud9 webes felüleletet használtam a projekt megírásához Windows-on. Ha valaki folytatni szeretné,
-akkor egyszerüen csak le kell töltenie, és a saját cloud9 projektjébe importálnia. Cloud9 használata esetén az npm install utasítás bash-beli futtása kell először a működéshez, majd a ./node_modules/.bin/ember serve parancs és a restapi-s projektben pedig, a server.js futtaására van szükség.
+A project a cloud9 webes felüleletetén lett megvalósítva, Windows-on. Ha valaki továbbfejleszteni szeretné,
+akkor  le kell töltenie a Restapit meg az ember respositoryt, majd importálnia kell őket a saját cloud 9es accountjába saját respositorikba. Ha bármilyen modul hiányzik azt npm-install-al lehet helyrehozni, és az oldalt meg úgy lehet látni hogy az restapi repo-nak a szerverét elindítjuk (server.js fájl -> run) és az ember repositoryban ha a gyak9 mappában belül vagyunk a következő parancsot beirjuk: ./node_modules/.bin/ember serve
+Ezekután a bash parancsablakában a local-hostos sorra rányomunk bal gombbal és "open" és már megnyílt is a weboldal ha mindent jól csináltunk.
 
-A fejlesztés zökkenőmentes menetéhez szükség lesz 2GB memóriára és valamilyen 2 magos processzorra minimum.
+A  zökkenőmentes fejlesztéshez/használathoz szükség van 2GB memóriára és valamilyen 2 magos processzorra minimum.
 
 
 ##Funkció lista 
 
 - error, auto egyedi az id alapján, csak egy lehet mindegyikből
 - Chiplistázó oldal müködik
-- Szerkesztés/Törlés funkció müködik
+- Megtekintés/Szerkesztés/Törlés funkció müködik
 
 További fejlesztési lehetőség:
-- Functions available only after login
-- Login/reigstration
-- Able to see which car belongs to which error on the car list
+- Hitelesítés után elérhető funkciók
+- Login/regisztráció
+- Korrekten látni lehessen melyik hiba kategóriába tartozik egy autó.
