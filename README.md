@@ -26,7 +26,7 @@ Nem funkcionális elvárások
 ##Tervezés
 
 Adatbázis-modell:
-![Adatbázis modell](https://github.mentation/bead3relation345345.png)
+![Adatbázis modell](https://github.com/Atg269/alkfejl3beadember/blob/master/Documentation/adatbazisdiagram.png)
 
 Itt egy kép látható az adatbázis modellről. Az error modell tükrözi a chiphibát akinek egy egyedi adattagja van,
 az id-ja, tehát két ugyanolyan objektum nem lehet az adatbázisban. Lehet sok hiba, mindegyikhez lehetnek
@@ -69,9 +69,9 @@ További fejlesztési lehetőség:
 - Korrekten látni lehessen melyik hiba kategóriába tartozik egy autó.
 
 
-![Adatbázis modell](https://github.com/3BL/alkfejlbead3ember/blob/master/documentation/bead3folyamat2525.png)
+![Folyamat diagram](https://github.com/Atg269/alkfejl3beadember/blob/master/Documentation/folyamatdiagram.png)
 
-![Adatbázis modell](https://github.com/3BL/alkfejlbead3ember/blob/master/documentation/webdesign252454.png)
+![Oldal diagram](https://github.com/Atg269/alkfejl3beadember/blob/master/Documentation/oldaldiagram.png)
 
 
 
