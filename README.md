@@ -19,8 +19,8 @@ Az alapkövetelmények a következők voltak:
 - szerveroldali perzisztálás fájlba
 
 Nem funkcionális elvárások
--Gyors működés
--Felhasználó barát oldalszerkezet
+- Gyors működés
+- Felhasználó barát oldalszerkezet
 
 Fogalomjegyzék
 
@@ -71,7 +71,7 @@ A fejlesztésnél felhasznált technológiák:
  
 ##Felhasználói dokumentáció
 
-Az oldalt úgy lehet elindítani hogy az restapi repo-nak a szerverét elindítjuk (server.js fájl -> run) és az ember repositoryban ha az autoerrorproject mappában belül vagyunk a következő parancsot beirjuk: ./node_modules/.bin/ember serve
+Az oldalt úgy lehet elindítani hogy a restapi repo-nak a szerverét elindítjuk (server.js fájl -> run) és az ember repositoryban ha az autoerrorproject mappában belül vagyunk a következő parancsot beirjuk: ./node_modules/.bin/ember serve
 Ezekután a bash parancsablakában a local-hostos sorra rányomunk bal gombbal és megnyomjuk hogy "open", és ezzel megnyitottuk a weboldalt ha mindent jól csináltunk.
 
 Ha valaki továbbfejleszteni szeretné a weboldalt,akkor le kell töltenie a restapis meg az emberes respositoryt cloud9-ről (c9.io/Atg269), majd importálnia kell őket a saját cloud 9es accountjába saját respositorikba. Ha bármilyen modul hiányzik azt npm-install-al lehet helyrehozni. 
